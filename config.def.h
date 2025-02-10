@@ -17,7 +17,7 @@ static const char dmenufont[]       = "Victor Mono Nerd Font:size=10";
 static const char normbgcolor[]	    = "#2f383e";
 static const char normbordercolor[] = "#868d80";
 static const char normfgcolor[]	    = "#d8caac";
-static const char selfgcolor[]	    = "#2fe83e";
+static const char selfgcolor[]	    = "#2f383e";
 static const char selbgcolor[]	    = "#a7c080";
 static const char selbordercolor[]  = "#a7c080";
 static const char *colors[][3]      = {
