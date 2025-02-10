@@ -84,11 +84,17 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *browser[] = { "librewolf", NULL };
+static const char *notes[] = { "obsidian", NULL };
+static const char *watchmenu[] = { "watchmenu", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd  } },
+	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd   } },
+	{ MODKEY|ShiftMask,             XK_b,	   spawn,          {.v = browser   } },
+	{ MODKEY|ShiftMask,             XK_o,	   spawn,          {.v = notes	   } },
+	{ MODKEY,             		XK_w,	   spawn,          {.v = watchmenu } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
