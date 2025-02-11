@@ -87,6 +87,7 @@ static const char *termcmd[]  = { "ghostty", NULL };
 static const char *browser[] = { "librewolf", NULL };
 static const char *notes[] = { "obsidian", NULL };
 static const char *watchmenu[] = { "watchmenu", NULL };
+static const char *vesktop[] = { "vesktop", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -95,6 +96,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_b,	   spawn,          {.v = browser   } },
 	{ MODKEY|ShiftMask,             XK_o,	   spawn,          {.v = notes	   } },
 	{ MODKEY,             		XK_w,	   spawn,          {.v = watchmenu } },
+	{ MODKEY,			XK_v,	   spawn,	   {.v = vesktop   } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
